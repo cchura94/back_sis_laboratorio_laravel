@@ -1,0 +1,12 @@
+1. descargar GIT de la pagina:
+        https://git-scm.com/
+2. Instalar y configurar
+  > git config --global user.name "Su Nombre"
+  > git config --global user.email "sucorreo@mail.com"
+------------------------------------------
+Si ya existe el proyecto
+  CLONAR
+  > git clone direccion_del_repositorio
+Si es un nuevo proyecto
+  INIT
+  > git init
