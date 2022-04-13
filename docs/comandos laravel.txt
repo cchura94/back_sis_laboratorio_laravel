@@ -4,7 +4,7 @@ Para generar un nuevo Model (Entidad)
 Para generar una nueva migracion (tabla)
  > php artisan make:migration create_roles_table
 
---------------------------------------------
+----------------------------------------------
 Podemos generar el Model + migracion
 
 > php artisan make:model Persona -m
@@ -31,3 +31,17 @@ Para verificar las migraciones
 
 ----------------- CONTROLADORES ---------------------
 php artisan make:controller UsuarioController --api
+
+CRUD de usuarios
+
+----------------- Seeders y Factories ----------------
+Generar Seeder 
+ > php artisan make:seeder UserSeeder
+
+ para ejecutar los seeder
+ > php artisan migrate --seed
+
+manejo de Factories
+----------------- Configuración -------------------
+zona horaria (timezone)
+traducción a español

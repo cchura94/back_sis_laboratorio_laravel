@@ -1,3 +1,37 @@
-GET http://127.0.0.1:8000/api/usuario?page=1
+GET http://127.0.0.1:8000/api/usuario?q=xbatz@example.com
 Accept: application/json
-Authorization: Bearer 6|MGMj8JhBbV1XPHZZWpBAUVFlGP5ekviu7mc3mBWF
+Authorization: Bearer 7|oeWCe7E3Fftz9eTno9mRzO8GChNo74tA3ZK1uzPS
+
+### guardar nuevo usuario
+POST http://127.0.0.1:8000/api/usuario
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 7|oeWCe7E3Fftz9eTno9mRzO8GChNo74tA3ZK1uzPS
+
+{
+    "name": "cristian",
+    "email": "cristian@mail.com",
+    "password": "cristian54321"
+}
+
+### buscar por id
+GET http://127.0.0.1:8000/api/usuario/2
+Accept: application/json
+Authorization: Bearer 7|oeWCe7E3Fftz9eTno9mRzO8GChNo74tA3ZK1uzPS
+
+### modificar usuario
+PUT http://127.0.0.1:8000/api/usuario/3
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 7|oeWCe7E3Fftz9eTno9mRzO8GChNo74tA3ZK1uzPS
+
+{
+    "name": "cristian modificar",
+    "email": "cristian.modificado@mail.com",
+    "password": "cristian543210"
+}
+
+### eliminar un usuario
+DELETE http://127.0.0.1:8000/api/usuario/1
+Accept: application/json
+Authorization: Bearer 7|oeWCe7E3Fftz9eTno9mRzO8GChNo74tA3ZK1uzPS
