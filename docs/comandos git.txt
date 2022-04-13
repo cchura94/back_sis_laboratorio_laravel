@@ -20,3 +20,7 @@ Relacionar el repositorio local con el repositorio remoto (github):
 git add .
 git commit -m "Proyecto inicial + migraciones"
 git push origin master
+
+
+-----------------
+git pull origin master

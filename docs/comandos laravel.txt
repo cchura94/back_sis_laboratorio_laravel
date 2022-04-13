@@ -28,3 +28,6 @@ Para verificar las migraciones
 
 - Para revertir las migration
 > php artisan migrate:rollback
+
+----------------- CONTROLADORES ---------------------
+php artisan make:controller UsuarioController --api
