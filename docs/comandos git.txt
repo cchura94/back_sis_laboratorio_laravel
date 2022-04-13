@@ -10,3 +10,13 @@ Si ya existe el proyecto
 Si es un nuevo proyecto
   INIT
   > git init
+----------------------
+Crear un cuenta en (github) o gitlab o bitbucket
+Crear un nuevo repositorio
+Relacionar el repositorio local con el repositorio remoto (github):
+ > git remote add origin https://github.com/cchura94/back_sis_laboratorio_laravel.git
+
+***************************
+git add .
+git commit -m "Proyecto inicial + migraciones"
+git push origin master
