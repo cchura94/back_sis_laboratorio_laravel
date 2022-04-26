@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,8 +24,11 @@ Route::group(["prefix" => "/v1/auth"], function(){
 });
 
 Route::group(["middleware" => "auth:sanctum"], function(){
+    // asignar cuenta de usuario a persona
+    Route::post("/persona/{id}/asignar-cuenta", [PersonaController::class, "asignarCuentaUsuario"]);
     // rutas seguras
     Route::apiResource("/usuario", UsuarioController::class);
+    Route::apiResource("/persona", PersonaController::class);
 }); 
 
 // nuevo cambio

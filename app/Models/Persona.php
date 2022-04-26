@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Persona extends Model
 {
     use HasFactory;
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function atiende()
+    {
+        return $this->hasMany(Consulta::class);
+    }
+
+    public function es_atendido()
+    {
+        return $this->hasMany(Consulta::class);
+    }
 }

@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Enfermedad extends Model
 {
     use HasFactory;
+
+    public function tipoexamenes()
+    {
+        return $this->belongsToMany(Tipoexamen::class);
+    }
 }

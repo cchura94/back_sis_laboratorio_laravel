@@ -1,0 +1,51 @@
+### Lista de Personas
+GET http://127.0.0.1:8000/api/persona
+Accept: application/json
+Authorization: Bearer 22|BvDTkkkzqHhleCDwWPNkAP9WVLP0fqIdAsW0qv7U
+
+### Guardar Persona
+POST http://127.0.0.1:8000/api/persona
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 22|BvDTkkkzqHhleCDwWPNkAP9WVLP0fqIdAsW0qv7U
+
+{
+    "nombres": "Juan",
+    "apellidos": "Paredez",
+    "ci_dni": "3453453",
+    "fecha_nacimiento": "90-10-2"
+}
+
+### Mostrar una Persona por id
+GET http://127.0.0.1:8000/api/persona/2
+Accept: application/json
+Authorization: Bearer 22|BvDTkkkzqHhleCDwWPNkAP9WVLP0fqIdAsW0qv7U
+
+### Modificar
+PUT http://127.0.0.1:8000/api/persona/2
+Accept: application/json
+Authorization: Bearer 22|BvDTkkkzqHhleCDwWPNkAP9WVLP0fqIdAsW0qv7U
+Content-Type: application/json
+
+{
+    "nombres": "Juan Modificado",
+    "apellidos": "Paredez mod",
+    "ci_dni": "34534532222",
+    "fecha_nacimiento": "90-10-2"
+}
+
+### eliminar
+DELETE http://127.0.0.1:8000/api/persona/2
+Accept: application/json
+Authorization: Bearer 22|BvDTkkkzqHhleCDwWPNkAP9WVLP0fqIdAsW0qv7U
+
+### Asignar una cuenta de usuario a una persona
+POST http://127.0.0.1:8000/api/persona/1/asignar-cuenta
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 22|BvDTkkkzqHhleCDwWPNkAP9WVLP0fqIdAsW0qv7U
+
+{
+    "email": "oscar@mail.com",
+    "password": "oscar54321"
+}
