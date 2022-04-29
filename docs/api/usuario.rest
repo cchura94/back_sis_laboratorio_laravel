@@ -1,6 +1,6 @@
-GET http://127.0.0.1:8000/api/usuario?q=xbatz@example.com
+GET http://127.0.0.1:8000/api/usuario?page=1
 Accept: application/json
-Authorization: Bearer 7|oeWCe7E3Fftz9eTno9mRzO8GChNo74tA3ZK1uzPS
+Authorization: Authorization: Bearer 29|r2jKDutYsIEK4zH9TnMJi6jJnIweVlAVWMkvSngU
 
 ### guardar nuevo usuario
 POST http://127.0.0.1:8000/api/usuario

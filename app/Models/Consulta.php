@@ -14,14 +14,14 @@ class Consulta extends Model
         return $this->belongsTo(Sucursal::class);
     }
 
-    public function persona()
+    public function profesional()
     {
-        return $this->belongsTo(Persona::class);
+        return $this->belongsTo(Persona::class, "profesional_id");
     }
 
     public function paciente()
     {
-        return $this->belongsTo(Persona::class);
+        return $this->belongsTo(Persona::class, "paciente_id");
     }
 
     public function tipoexamenes()

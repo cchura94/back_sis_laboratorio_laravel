@@ -1,13 +1,13 @@
 ### Lista de Personas
 GET http://127.0.0.1:8000/api/persona
 Accept: application/json
-Authorization: Bearer 22|BvDTkkkzqHhleCDwWPNkAP9WVLP0fqIdAsW0qv7U
+Authorization: Bearer 29|r2jKDutYsIEK4zH9TnMJi6jJnIweVlAVWMkvSngU
 
 ### Guardar Persona
 POST http://127.0.0.1:8000/api/persona
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer 22|BvDTkkkzqHhleCDwWPNkAP9WVLP0fqIdAsW0qv7U
+Authorization: Bearer 26|cv8RmwswfAAyS08bZziiQoepv8OBJqCJ7rt2jfqS
 
 {
     "nombres": "Juan",

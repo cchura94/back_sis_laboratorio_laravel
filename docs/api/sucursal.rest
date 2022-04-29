@@ -1,0 +1,17 @@
+GET http://127.0.0.1:8000/api/sucursal
+Accept: application/json
+Authorization: Bearer 29|r2jKDutYsIEK4zH9TnMJi6jJnIweVlAVWMkvSngU
+
+### guardar Sucursal
+POST http://127.0.0.1:8000/api/sucursal
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 29|r2jKDutYsIEK4zH9TnMJi6jJnIweVlAVWMkvSngU
+
+{
+    "nombre": "Casa matriz",
+    "telefono": "23423424",
+    "direccion": "Av. 123 Zona abc",
+    "ciudad": "La Paz",
+    "user_id": 2
+}

@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ConsultaController;
 use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\SucursalController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +31,8 @@ Route::group(["middleware" => "auth:sanctum"], function(){
     // rutas seguras
     Route::apiResource("/usuario", UsuarioController::class);
     Route::apiResource("/persona", PersonaController::class);
+    Route::apiResource("/sucursal", SucursalController::class);
+    Route::apiResource("/consulta", ConsultaController::class);
 }); 
 
 // nuevo cambio

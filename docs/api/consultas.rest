@@ -1,0 +1,16 @@
+GET http://127.0.0.1:8000/api/consulta
+Accept: application/json
+Authorization: Bearer 31|UEbQsyFhBB5xfemdOOW4Z5Yrgw5fJgnQuwjsOPiu
+
+### Guardar Consulta
+POST http://127.0.0.1:8000/api/consulta
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 29|r2jKDutYsIEK4zH9TnMJi6jJnIweVlAVWMkvSngU
+
+{
+    "paciente_id": 3,
+    "profesional_id": 7,
+    "sucursal_id": 1
+}
+
