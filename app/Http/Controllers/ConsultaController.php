@@ -16,10 +16,10 @@ class ConsultaController extends Controller
      */
     public function index()
     {
-        $consultas = Consulta::with("sucursal")
+        $consultas = Consulta::orderBy('id', 'desc')->with("sucursal")
                                 ->with("paciente")
                                 ->with("profesional")
-                                ->paginate(10);
+                                ->paginate(2);
         return response()->json($consultas);
     }
 
