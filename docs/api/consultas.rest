@@ -1,6 +1,6 @@
 GET http://127.0.0.1:8000/api/consulta
 Accept: application/json
-Authorization: Bearer 31|UEbQsyFhBB5xfemdOOW4Z5Yrgw5fJgnQuwjsOPiu
+Authorization: Bearer 34|1cpJ0N8yIy3Ji6jrEzAKQmXCjbs5PRSYBMJwMlQJ
 
 ### Guardar Consulta
 POST http://127.0.0.1:8000/api/consulta

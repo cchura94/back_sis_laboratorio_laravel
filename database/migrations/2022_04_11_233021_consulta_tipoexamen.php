@@ -14,9 +14,10 @@ class ConsultaTipoexamen extends Migration
     public function up()
     {
         Schema::create('consulta_tipoexamen', function (Blueprint $table) {
-            $table->primary(["consulta_id", "tipoexamen_id"]);
+            // $table->primary(["consulta_id", "tipoexamen_id"]);
+            $table->id();
 
-            $table->string("archvivo")->nullable();
+            $table->string("archivo")->nullable();
             $table->text("detalle")->nullable();
 
             $table->bigInteger("consulta_id")->unsigned();

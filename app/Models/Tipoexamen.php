@@ -11,7 +11,7 @@ class Tipoexamen extends Model
 
     public function consultas()
     {
-        return $this->belongsToMany(Consulta::class);
+        return $this->belongsToMany(Consulta::class)->withPivot('archivo', 'detalle')->withTimestamps();
     }
 
     public function enfermedades()

@@ -19,7 +19,7 @@ class ConsultaController extends Controller
         $consultas = Consulta::orderBy('id', 'desc')->with("sucursal")
                                 ->with("paciente")
                                 ->with("profesional")
-                                ->paginate(2);
+                                ->paginate(5);
         return response()->json($consultas);
     }
 
@@ -65,7 +65,12 @@ class ConsultaController extends Controller
      */
     public function show($id)
     {
-        //
+        $consulta = Consulta::find($id);
+        $consulta->sucursal;
+        $consulta->paciente;
+        $consulta->profesional;
+        $consulta->tipoexamenes;
+        return response()->json($consulta);
     }
 
     /**
@@ -89,5 +94,30 @@ class ConsultaController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function asignarTipoExamen(Request $request, $consulta_id)
+    {
+        // validar
+        $request->validate([
+            "archivo" => "required",
+            "tipoexamen_id" => "required"
+        ]);
+        // subir archivo
+        $direccion_archivo = "";
+        if($file = $request->file("archivo")){
+            $direccion_archivo = time() . '-'. $file->getClientOriginalName();
+            $file->move("archivos", $direccion_archivo);
+            $direccion_archivo = "archivos/" . $direccion_archivo;
+        }
+        // incrustar archivo entre consulta y tipoexamen
+        $consulta = Consulta::find($consulta_id);
+        $consulta->tipoexamenes()
+                ->attach($request->tipoexamen_id, [
+                                                    'archivo' => $direccion_archivo,
+                                                    'detalle' => $request->detalle
+                                                ]);
+        // responder
+        return response()->json(["mensaje" => "Archivo registrado"], 201);
     }
 }

@@ -1,0 +1,21 @@
+GET http://127.0.0.1:8000/api/consulta/6/asignar-tipo-examen
+Accept: application/json
+Authorization: Bearer 34|1cpJ0N8yIy3Ji6jrEzAKQmXCjbs5PRSYBMJwMlQJ
+Content-Type: multipart/form-data
+
+//  insert into `consulta_tipoexamen` (`archivo`, `consulta_id`, `created_at`, `detalle`, `tipoexamen_id`, `updated_at`) values (archivos/1651622361-captura cursos.png, 1, 2022-05-03 19:59:21, SIN OBSERVACIONES, 1, 2022-05-03 19:59:21)
+
+### lista tipo examen
+GET http://127.0.0.1:8000/api/tipoexamen
+Accept: application/json
+Authorization: Bearer 37|Dhl2hMpfJqrZycg3lsT3LQewY7chYrFvnS9YYXdd
+
+### guardar
+POST http://127.0.0.1:8000/api/tipoexamen
+Accept: application/json
+Authorization: Bearer 37|Dhl2hMpfJqrZycg3lsT3LQewY7chYrFvnS9YYXdd
+Content-Type: application/json
+
+{
+    "examen": "ANALISIS DE PRUEBAS"
+}

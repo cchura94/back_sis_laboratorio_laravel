@@ -26,6 +26,6 @@ class Consulta extends Model
 
     public function tipoexamenes()
     {
-        return $this->belongsToMany(Tipoexamen::class);
+        return $this->belongsToMany(Tipoexamen::class)->withPivot('archivo', 'detalle')->withTimestamps();
     }
 }
