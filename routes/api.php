@@ -42,3 +42,6 @@ Route::group(["middleware" => "auth:sanctum"], function(){
 }); 
 
 // nuevo cambio
+Route::get("/no-autorizado", function(){
+    return ["mensaje" => "require login"];
+})->name("login");
