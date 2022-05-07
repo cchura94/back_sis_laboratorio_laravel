@@ -33,6 +33,9 @@ Route::group(["middleware" => "auth:sanctum"], function(){
     // registrar el archivo entre consulta y tipoexamen
     Route::post("/consulta/{id}/asignar-tipo-examen", [ConsultaController::class, "asignarTipoExamen"]);
     
+    // buscar pacientes
+    
+    Route::get("/persona/buscar-pacientes", [PersonaController::class, "buscarPacientes"]);
     // rutas seguras
     Route::apiResource("/usuario", UsuarioController::class);
     Route::apiResource("/persona", PersonaController::class);

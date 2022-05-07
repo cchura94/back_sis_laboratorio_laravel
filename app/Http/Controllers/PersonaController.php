@@ -20,6 +20,16 @@ class PersonaController extends Controller
         return response()->json($personas, 200);
     }
 
+    public function buscarPacientes(Request $request)
+    {
+        // paginación
+        $pacientes = Persona::orWhere("nombres", "like", "%".$request->q."%")
+                            ->orWhere("apellidos", "like", "%".$request->q."%")
+                            ->orWhere("ci_dni", "like", "%".$request->q."%")
+                            ->get();
+        return response()->json($pacientes, 200);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
