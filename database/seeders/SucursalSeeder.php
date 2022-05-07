@@ -20,5 +20,6 @@ class SucursalSeeder extends Seeder
         $s->direccion = "Av 123 Z abc";
         $s->ciudad = "prueba";
         $s->user_id = 1;
+        $s->save();
     }
 }
