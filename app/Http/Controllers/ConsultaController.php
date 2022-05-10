@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Consulta;
 use App\Models\Persona;
 use App\Models\Sucursal;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ConsultaController extends Controller
 {
@@ -119,5 +120,17 @@ class ConsultaController extends Controller
                                                 ]);
         // responder
         return response()->json(["mensaje" => "Archivo registrado"], 201);
+    }
+
+    public function reportePdf($id)
+    {
+        $consulta = Consulta::find($id);
+        $consulta->sucursal;
+        $consulta->paciente;
+        $consulta->profesional;
+        $consulta->tipoexamenes;
+
+        $pdf = PDF::loadView('consulta', ["data" => $consulta]);
+        return $pdf->stream('consulta.pdf');
     }
 }

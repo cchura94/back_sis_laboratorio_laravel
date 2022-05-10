@@ -36,6 +36,8 @@ Route::group(["middleware" => "auth:sanctum"], function(){
     // buscar pacientes
     
     Route::get("/persona/buscar-pacientes", [PersonaController::class, "buscarPacientes"]);
+    
+    // PDF
     // rutas seguras
     Route::apiResource("/usuario", UsuarioController::class);
     Route::apiResource("/persona", PersonaController::class);
@@ -43,6 +45,7 @@ Route::group(["middleware" => "auth:sanctum"], function(){
     Route::apiResource("/consulta", ConsultaController::class);
     Route::apiResource("/tipoexamen", TipoexamenController::class);
 }); 
+Route::get("/consulta/{id}/reportepdf", [ConsultaController::class, "reportePdf"]);
 
 // nuevo cambio
 Route::get("/no-autorizado", function(){
